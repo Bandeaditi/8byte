@@ -1,7 +1,7 @@
 import pytesseract
 from pdf2image import convert_from_path
-from .llm import parse_receipt_with_llm, categorize_vendor
-from .database import Receipt
+from bankend.llm import parse_receipt_with_llm, categorize_vendor
+from bankend.database import Receipt
 
 def extract_text_from_image(image_path: str) -> str:
     return pytesseract.image_to_string(image_path)

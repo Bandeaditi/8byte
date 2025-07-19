@@ -1,4 +1,7 @@
 import sys
+from pathlib import Path
+sys.path.append(str(Path(__file__).parent.parent))
+from bankend.llm import llm as client
 import streamlit as st
 from bankend.parse import parse_receipt
 from bankend.database import save_receipt, init_db

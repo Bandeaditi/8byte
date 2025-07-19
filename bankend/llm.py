@@ -37,3 +37,4 @@ def categorize_vendor(vendor: str) -> str:
     """
     response = llm(prompt, max_new_tokens=10)
     return response[0]["generated_text"].strip() 
+client = llm
